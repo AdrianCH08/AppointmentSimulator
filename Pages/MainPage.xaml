@@ -62,7 +62,7 @@
             <HorizontalStackLayout VerticalOptions="Center"
                                    HorizontalOptions="Center"
                                    Spacing="10">
-                <Button Text="Agregar Cita" />
+                <Button Text="Agregar Cita" Clicked="OnClickedAdd"/>
                 <Button Text="Eliminar Cita Seleccionada" />
             </HorizontalStackLayout>
 

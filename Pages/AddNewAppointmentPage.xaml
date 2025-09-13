@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppointmentSimulator.Pages.AddNewAppointmentPage"
+             Title="AddNewAppointmentPage">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label Text="Nombre"/>
+            <Entry Placeholder="Nombre" Text="{Binding Name}"/>
+
+            <Label Text="Asunto"/>
+            <Entry Placeholder="Asunto" Text="{Binding Subject}"/>
+
+            <Label Text="Fecha de la cita"/>
+            <DatePicker Date="{Binding AppointmentDate}"/>
+
+            <Label Text="Fecha de inicio"/>
+            <TimePicker Time="{Binding StartingDate}"/>
+
+            <Label Text="Fecha de término"/>
+            <TimePicker Time="{Binding EndingDate}"/>
+
+            <Button Text="Agendar Cita" Command="{Binding AddAppointmentCommand}"/>
+
+
+
+        </VerticalStackLayout>
+
+        </ScrollView>
+</ContentPage>
