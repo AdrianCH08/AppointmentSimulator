@@ -64,7 +64,7 @@
                                    HorizontalOptions="Center"
                                    Spacing="10">
                 <Button Text="Agregar Cita" Clicked="OnClickedAdd"/>
-                <Button Text="Eliminar Cita Seleccionada" Command="{Binding BorrarAppointmentCommand}"/>
+                <Button Text="Eliminar Cita Seleccionada" Command="{Binding DeleteAppointmentCommand}"/>
                 
             </HorizontalStackLayout>
 

@@ -55,12 +55,21 @@ namespace AppointmentSimulator.ViewModels
             GlobalData.Appointments.Add(appointment);
 
             await Shell.Current.DisplayAlert("Correcto", "Nueva cita creada", "OK");
-            await Shell.Current.GoToAsync("..");
+            await Shell.Current.GoToAsync("//MainPage");
+
+
+            //Limpiar formulario
+            Name = string.Empty;
+            Subject = string.Empty;
+            AppointmentDate = DateTime.Now;
+            StartingTime = TimeSpan.Zero;
+            EndingTime = TimeSpan.Zero;
+
         }
 
 
         [RelayCommand]
-        public async Task BorrarAppointment()
+        public async Task DeleteAppointment()
         {
             if (SelectedAppointment == null)
             {
