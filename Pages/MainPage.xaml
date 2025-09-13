@@ -8,7 +8,8 @@
                              Spacing="15">
 
             <CollectionView x:Name="AppointmentsCollectionView"
-                            SelectionMode="Single">
+                            SelectionMode="Single"
+                            SelectedItem="{Binding SelectedAppointment}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <Grid Padding="5">
@@ -63,7 +64,8 @@
                                    HorizontalOptions="Center"
                                    Spacing="10">
                 <Button Text="Agregar Cita" Clicked="OnClickedAdd"/>
-                <Button Text="Eliminar Cita Seleccionada" />
+                <Button Text="Eliminar Cita Seleccionada" Command="{Binding BorrarAppointmentCommand}"/>
+                
             </HorizontalStackLayout>
 
         </VerticalStackLayout>

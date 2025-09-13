@@ -17,6 +17,9 @@ namespace AppointmentSimulator.ViewModels
         [ObservableProperty]
         private TimeSpan _endingTime;
 
+        [ObservableProperty]
+        private Appointment? selectedAppointment;
+
         [RelayCommand]
         public async Task AddAppointment()
         {
@@ -55,6 +58,18 @@ namespace AppointmentSimulator.ViewModels
             await Shell.Current.GoToAsync("..");
         }
 
+
+        [RelayCommand]
+        public async Task BorrarAppointment()
+        {
+            if (SelectedAppointment == null)
+            {
+                await Shell.Current.DisplayAlert("Error", "Selecciona una cita", "OK");
+                return;
+            }
+            GlobalData.Appointments.Remove(selectedAppointment);
+            SelectedAppointment = null;
+        }
     }
         
 }

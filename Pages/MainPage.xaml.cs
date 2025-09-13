@@ -17,5 +17,6 @@ namespace AppointmentSimulator.Pages
             await Shell.Current.GoToAsync("//AddNewAppointmentPage");
         }
 
+
     }
 }
